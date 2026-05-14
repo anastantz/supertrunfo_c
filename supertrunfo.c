@@ -125,7 +125,7 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km2\n", densidade2);
     printf("PIB per Capita: %.2f\n",         pibPerCapita2);
 
-     * COMPARACAO - ATRIBUTO ESCOLHIDO: POPULACAO
+     /* COMPARACAO - ATRIBUTO ESCOLHIDO: POPULACAO
      *
      * Criterio: maior populacao vence.
      * Para densidade populacional, o criterio seria invertido
