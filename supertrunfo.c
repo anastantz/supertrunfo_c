@@ -1,4 +1,4 @@
-#include <stdio.h>
+        #include <stdio.h>
 
 /*
  * Projeto: Super Trunfo - Paises
@@ -14,9 +14,9 @@
 
 int main() {
 
-
+    /*
      * DECLARACAO DAS VARIAVEIS
-     *
+     */
 
     /* Carta 1 */
     char estado1[3];
@@ -50,9 +50,7 @@ int main() {
     float valorAtrib2Carta1, valorAtrib2Carta2;   /* Atributo 2 de cada carta */
     float somaCartA1, somaCartA2;                  /* Soma dos dois atributos  */
 
-    /* =====================================================
-     * ENTRADA DE DADOS - CARTA 1
-     * ===================================================== */
+    /* ENTRADA DE DADOS - CARTA 1 */
 
     printf("===== SUPER TRUNFO: PAISES =====\n");
     printf("\nInsira os dados da Carta 1:\n");
@@ -78,9 +76,7 @@ int main() {
     printf("Numero de pontos turisticos: ");
     scanf("%d", &ptsTuristicos1);
 
-    /* =====================================================
-     * ENTRADA DE DADOS - CARTA 2
-     * ===================================================== */
+    /* ENTRADA DE DADOS - CARTA 2 */
 
     printf("\nInsira os dados da Carta 2:\n");
 
@@ -105,9 +101,7 @@ int main() {
     printf("Numero de pontos turisticos: ");
     scanf("%d", &ptsTuristicos2);
 
-    /* =====================================================
-     * CALCULOS DERIVADOS
-     * ===================================================== */
+    /* CALCULOS DERIVADOS */
 
     densidade1    = (float) populacao1 / area1;
     pibPerCapita1 = pib1 / (float) populacao1;
@@ -115,9 +109,7 @@ int main() {
     densidade2    = (float) populacao2 / area2;
     pibPerCapita2 = pib2 / (float) populacao2;
 
-    /* =====================================================
-     * EXIBICAO DOS DADOS DAS CARTAS
-     * ===================================================== */
+    /* EXIBICAO DOS DADOS DAS CARTAS */
 
     printf("\n===== CARTA 1 =====\n");
     printf("Estado: %s\n",                           estado1);
@@ -141,9 +133,7 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km2\n", densidade2);
     printf("PIB per Capita: %.2f\n",                 pibPerCapita2);
 
-    /* =====================================================
-     * MENU 1 - ESCOLHA DO PRIMEIRO ATRIBUTO
-     * ===================================================== */
+    /* MENU 1 - ESCOLHA DO PRIMEIRO ATRIBUTO */
 
     printf("\n===== ESCOLHA O PRIMEIRO ATRIBUTO =====\n");
     printf("1. Populacao\n");
@@ -162,12 +152,10 @@ int main() {
         return 1; /* Encerra com codigo de erro */
     }
 
-    /* =====================================================
-     * MENU 2 - ESCOLHA DO SEGUNDO ATRIBUTO (DINAMICO)
-     *
+    /* MENU 2 - ESCOLHA DO SEGUNDO ATRIBUTO (DINAMICO)
      * O atributo ja escolhido no menu 1 nao aparece aqui.
      * O switch imprime todas as opcoes, pulando a escolhida.
-     * ===================================================== */
+     */
 
     printf("\n===== ESCOLHA O SEGUNDO ATRIBUTO =====\n");
 
@@ -193,15 +181,13 @@ int main() {
         return 1;
     }
 
-    /* =====================================================
-     * EXTRACAO DOS VALORES DO PRIMEIRO ATRIBUTO
-     *
+    /* EXTRACAO DOS VALORES DO PRIMEIRO ATRIBUTO
      * O switch popula valorAtrib1Carta1 e valorAtrib1Carta2
      * com os valores correspondentes ao atributo escolhido.
      * Para densidade (regra invertida), o valor e negado:
      * assim a soma final funciona de forma uniforme,
      * pois menor densidade real = maior valor negado.
-     * ===================================================== */
+     */
 
     switch (opcao1) {
         case 1:
@@ -235,10 +221,9 @@ int main() {
             break;
     }
 
-    /* =====================================================
-     * EXTRACAO DOS VALORES DO SEGUNDO ATRIBUTO
+    /* EXTRACAO DOS VALORES DO SEGUNDO ATRIBUTO
      * Mesma logica do switch anterior, para opcao2.
-     * ===================================================== */
+     */
 
     switch (opcao2) {
         case 1:
@@ -271,16 +256,12 @@ int main() {
             break;
     }
 
-    /* =====================================================
-     * CALCULO DAS SOMAS
-     * ===================================================== */
+    /* CALCULO DAS SOMAS */
 
     somaCartA1 = valorAtrib1Carta1 + valorAtrib2Carta1;
     somaCartA2 = valorAtrib1Carta2 + valorAtrib2Carta2;
 
-    /* =====================================================
-     * EXIBICAO DO RESULTADO
-     * ===================================================== */
+    /* EXIBICAO DO RESULTADO */
 
     printf("\n===== RESULTADO DA COMPARACAO =====\n\n");
 
@@ -411,10 +392,7 @@ int main() {
         printf("EMPATE! As duas cartas somaram valores iguais.\n");
     }
 
-    /* =====================================================
-     * ENCERRAMENTO
-     * ===================================================== */
-
+    /* ENCERRAMENTO */
     printf("\n=================================\n");
     printf("Obrigado por usar o Super Trunfo!\n");
 
